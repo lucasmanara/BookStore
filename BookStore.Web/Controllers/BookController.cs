@@ -99,12 +99,12 @@ namespace BookStore.Web.Controllers
             {
                 var listOfObj = _service.Get();
 
-                foreach(var obj in listOfObj)
+                foreach (var obj in listOfObj)
                 {
                     obj.Genre = _serviceGenre.Get(obj.GenreId);
                     obj.Author = _serviceAuthor.Get(obj.AuthorId);
                 }
-                
+
                 return new ObjectResult(_service.Get());
             }
             catch (Exception ex)

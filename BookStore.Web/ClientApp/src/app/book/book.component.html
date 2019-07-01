@@ -1,0 +1,97 @@
+
+<h1>Livros</h1>
+
+ <form #form="ngForm" id="bookForm" (ngSubmit)="onSubmit(form)" autocomplete="off">
+  <div class="row">
+    <div class="col-xl-4 text-xs-center">
+      <div class="mb-3">
+          <input type="hidden" name="Id" [(ngModel)]="service.formData.Id">
+          <div class="form-group">
+            <label>Titulo</label>
+            <input name="title" [(ngModel)]="service.formData.title" class="form-control" required maxlength="50">
+          </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-xl-4 text-xs-center">
+      <div class="mb-3">
+          <div class="form-group">
+            <label>Autor</label>
+            <input name="authorid" [(ngModel)]="service.formData.authorid" class="form-control" required maxlength="50">
+          </div>
+      </div>
+    </div> -->
+
+    <div class="col-xl-4 text-xs-center">
+        <app-combo-author [(comboValue)]="service.formData.authorid"></app-combo-author>
+    </div>   
+
+    <div class="col-xl-4 text-xs-center">
+        <app-combo-genre [(comboValue)]="service.formData.genreid"></app-combo-genre>
+    </div>   
+
+    <!-- <div class="col-xl-4 text-xs-center">
+      <div class="mb-3">
+          <div class="form-group">
+            <label>Gênero</label>
+            <input name="genreid" [(ngModel)]="service.formData.genreid" class="form-control" required maxlength="50">
+          </div>
+      </div>
+    </div> -->
+
+    
+    <div class="col-xl-4 text-xs-center">
+      <div class="mb-3">
+          <div class="form-group">
+            <label>Data de Publicação</label>
+            <input name="publishdate" [(ngModel)]="service.formData.publishdate" class="form-control" required maxlength="50">
+          </div>
+      </div>
+    </div>
+
+    <div class="col-xl-4 text-xs-center">
+      <div class="mb-3">
+          <div class="form-group">
+            <label>Saldo</label>
+            <input name="stock" [(ngModel)]="service.formData.stock" class="form-control" required maxlength="50">
+          </div>
+      </div>
+    </div>
+      
+    <div class="col-xl-4 text-xs-center">
+        <div class="mb-3">
+            <div class="wrapper">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Salvar</button>&nbsp;&nbsp;
+                <div class="btn btn-danger" (click)="resetForm()">Limpar</div>
+            </div>
+        </div>
+      </div>
+   
+  </div>
+</form> 
+
+<p *ngIf="!books"><em>Loading...</em></p>
+<fieldset>
+  <table class='table table-striped' *ngIf="books">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Titulo</th>
+        <th>Autor</th>
+        <th>Gênero</th>
+        <th>Data de Publicação</th>
+        <th>Saldo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ books.id }}</td>
+        <td>{{ books.title }}</td>
+        <td>{{ books.author.name }}</td>
+        <td>{{ books.genre.name }}</td>
+        <td>{{ books.publishDate }}</td>
+        <td>{{ books.stock }}</td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>

@@ -1,0 +1,44 @@
+
+<h1>Gêneros</h1>
+
+ <form #form="ngForm" id="bookForm" (ngSubmit)="onSubmit(form)" autocomplete="off">
+  <div class="row">
+    <div class="col-xl-4 text-xs-center">
+      <div class="mb-3">
+          <input type="hidden" name="Id" [(ngModel)]="service.formData.Id">
+          <div class="form-group">
+            <label>Descrição do Gênero</label>
+            <input name="name" [(ngModel)]="service.formData.name" class="form-control" required maxlength="50">
+          </div>
+      </div>
+    </div>
+    
+    <div class="col-xl-4 text-xs-center">
+        <div class="mb-3">
+            <div class="wrapper">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Salvar</button>&nbsp;&nbsp;
+                <div class="btn btn-danger" (click)="resetForm()">Limpar</div>
+            </div>
+        </div>
+      </div>
+   
+  </div>
+</form> 
+<p *ngIf="!genres"><em>Loading...</em></p>
+<fieldset>
+
+  <table class='table table-striped' *ngIf="genres">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Gênero</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let genre of genres">
+        <td>{{ genre.id }}</td>
+        <td>{{ genre.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>

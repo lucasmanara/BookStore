@@ -1,0 +1,10 @@
+<div class="mb-3">
+  <div class="form-group">
+    <label for="fabricante">Gênero</label>
+    <select class="form-control" name="genre" id="genre" #genre [(ngModel)]="comboValue"  (ngModelChange)="comboValueChange.emit(comboValue)">
+
+      <option value="0">Selecione</option>
+      <option *ngFor="let genre of genres" value="{{ genre.id }}">{{ genre.name }}</option>
+    </select>
+  </div>
+</div>
