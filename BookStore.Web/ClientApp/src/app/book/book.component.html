@@ -31,6 +31,10 @@
     </div>   
 
     <!-- <div class="col-xl-4 text-xs-center">
+        <date-pipe></date-pipe>
+    </div>    -->
+
+    <!-- <div class="col-xl-4 text-xs-center">
       <div class="mb-3">
           <div class="form-group">
             <label>Gênero</label>
@@ -39,12 +43,20 @@
       </div>
     </div> -->
 
-    
+    <!-- <div class="form-group row">
+        <label for="example-date-input" class="col-2 col-form-label">Date</label>
+        <div class="col-10">
+          <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+        </div>
+      </div> -->
+
     <div class="col-xl-4 text-xs-center">
       <div class="mb-3">
           <div class="form-group">
             <label>Data de Publicação</label>
-            <input name="publishdate" [(ngModel)]="service.formData.publishdate" class="form-control" required maxlength="50">
+            <input name="publishdate" [(ngModel)]="service.formData.publishdate" class="form-control" type="date" id="publishdate">
+
+            <!-- <input name="publishdate" [(ngModel)]="service.formData.publishdate" class="form-control" required maxlength="50" > -->
           </div>
       </div>
     </div>

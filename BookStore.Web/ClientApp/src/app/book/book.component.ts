@@ -6,6 +6,7 @@ import { BookService } from './book.service';
 //import { AlertModalService } from 'src/app/shared/services/alert-modal.service';
 import { Book } from './book.model';
 
+
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
@@ -25,6 +26,10 @@ export class BookComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+   
+    const d: string = new Date().toLocaleString();
+    console.log(d);
+
     this.getBooks();
     this.resetForm();
     this.service.refreshList();
@@ -60,6 +65,8 @@ export class BookComponent implements OnInit {
   }
 
   resetForm(form?: NgForm) {
+
+    
     
     this.service.formData = {
       Id: null,
@@ -75,11 +82,11 @@ export class BookComponent implements OnInit {
         name: '',
       },
       stock: null,
-      publishdate: '2019-01-01'
+      publishdate: new Date().toLocaleString()
     };
  }
 
- log (log) { console.log(log);}
+ 
 
     onSubmit(form: NgForm) {
 
