@@ -5,3 +5,11 @@
     height: 100%;
     padding-top: 30px;
 } 
+
+.btn-options{
+    display: flex;
+    justify-content: center;
+    button{
+        margin-left: 2px;
+    }
+}

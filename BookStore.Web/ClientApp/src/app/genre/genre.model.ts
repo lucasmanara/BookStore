@@ -1,5 +1,5 @@
 
 export class Genre {
-  Id: number;
+  id: number;
   name: string;
 }

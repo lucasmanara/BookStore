@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-xl-4 text-xs-center">
       <div class="mb-3">
-          <input type="hidden" name="Id" [(ngModel)]="service.formData.Id">
+          <input type="hidden" name="id" [(ngModel)]="service.formData.id">
           <div class="form-group">
             <label>Descrição do Gênero</label>
             <input name="name" [(ngModel)]="service.formData.name" class="form-control" required maxlength="50">
@@ -31,12 +31,19 @@
       <tr>
         <th>#</th>
         <th>Autor</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let author of authors">
         <td>{{ author.id }}</td>
         <td>{{ author.name }}</td>
+        <td>
+            <span class="btn-options">
+              <button title="Excluir" (click)="onDelete(author.id)" class="btn btn-outline-danger mb-1 btn-sm">Remover</button>
+              <button title="Editar" (click)="populateForm(author)" class="btn btn-outline-info mb-1 btn-sm">Editar</button>
+            </span>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -35,7 +35,7 @@ export class BookService {
   }
 
   get() {
-    return this.http.get<Book[]>(this.API+'/27').pipe(
+    return this.http.get<Book[]>(this.API+'/28').pipe(
       tap(console.log)
     );
   }
@@ -45,8 +45,8 @@ export class BookService {
   }
 
   put(formData: Book) {
-    const Id = formData.Id;
-    return this.http.put(this.API + '/' + Id, formData, options).pipe(take(1));
+    const id = formData.id;
+    return this.http.put(this.API + '/' + id, formData, options).pipe(take(1));
   }
 
   delete(id: number) {

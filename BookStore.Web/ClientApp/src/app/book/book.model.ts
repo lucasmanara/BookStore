@@ -1,15 +1,15 @@
 
 export class Book {
-  Id: number;
+  id: number;
   title: string;
   genreid: number;
   genre: {
-    Id: number;
+    id: number;
     name: string;
   }
   authorid: number;
   author: {
-    Id: number;
+    id: number;
     name: string;
   }
   stock: number;

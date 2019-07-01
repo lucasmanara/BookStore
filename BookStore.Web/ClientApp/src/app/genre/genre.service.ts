@@ -43,8 +43,8 @@ export class GenreService {
   }
 
   put(formData: Genre) {
-    const Id = formData.Id;
-    return this.http.put(this.API + '/' + Id, formData, options).pipe(take(1));
+    const id = formData.id;
+    return this.http.put(this.API + '/' + id, formData, options).pipe(take(1));
   }
 
   delete(id: number) {

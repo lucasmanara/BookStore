@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+// import {  } from '@types/jquery';
+//import * as $ from 'jquery';
 
 import { GenreService } from './genre.service';
 //import { AlertModalService } from 'src/app/shared/services/alert-modal.service';
@@ -47,7 +49,7 @@ export class GenreComponent implements OnInit {
     );
    }
 
-   updateRecord(form) {
+  updateRecord(form) {
     console.log(form)
     this.service.put(form).subscribe(
       success => {
@@ -60,10 +62,22 @@ export class GenreComponent implements OnInit {
     );
   }
 
+  onDelete(id: number) {
+    if (confirm('Tem certeza que deseja deletar?')) {
+      this.service.delete(id).subscribe(
+        success => {
+          this.service.get().subscribe(genres => this.genres = genres);
+          //  this.alertService.showAlertSuccess('Excluído com sucesso.');
+        },
+        error => { }
+      );
+    }
+   }
+
   resetForm(form?: NgForm) {
     
     this.service.formData = {
-      Id: null,
+      id: null,
       name: ''
     };
  }
@@ -81,48 +95,27 @@ export class GenreComponent implements OnInit {
     //   return;
     // }
 
-     if (this.service.formData.Id == 0 || this.service.formData.Id == 0) {
-        this.service.formData.Id = null;
+     if (this.service.formData.id == 0 || this.service.formData.id == 0) {
+        this.service.formData.id = null;
      }
 
-     if (this.service.formData.Id == null) {
+     if (this.service.formData.id == null) {
         const dataJson = {
           name: this.service.formData.name
         };
-        this.insertRecord(dataJson);
+        
+       console.log('POST')
+        //this.insertRecord(dataJson);
      } else {
+       console.log(this.service.formData)
         this.updateRecord(this.service.formData);
      };
      
     }
 
-
-    
-
-    
-
-    
-
-    //
-
-    //onDelete(id: number) {
-
-    //  if (confirm('Tem certeza que deseja deletar?')) {
-    //    this.service.delete(id).subscribe(
-    //      success => {
-    //        this.service.refreshList();
-    //        this.alertService.showAlertSuccess('Excluído com sucesso.');
-    //      },
-    //      error => { }
-    //    );
-    //  }
-    //}
-
-    //populateForm(emp: Book) {
-    //  // $('#fabricante').val(emp.fabricante.idFabricante);
-    //  // emp.ativo ? $('#ativo option:eq(1)').prop('selected', true) : $('#ativo option:eq(0)').prop('selected', true);
-    //  // this.service.formData = Object.assign({}, emp);
-    //}
+    populateForm(emp: Genre) {
+      this.service.formData = Object.assign({}, emp);
+    }
 
     //getValueToComponentChild($event) {
     //  this.childFabricante = $event;

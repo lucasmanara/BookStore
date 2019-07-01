@@ -5,6 +5,7 @@ import { NgForm } from '@angular/forms';
 import { BookService } from './book.service';
 //import { AlertModalService } from 'src/app/shared/services/alert-modal.service';
 import { Book } from './book.model';
+import * as $ from 'jquery';
 
 
 @Component({
@@ -26,10 +27,6 @@ export class BookComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   
-    const d: string = new Date().toLocaleString();
-    console.log(d);
-
     this.getBooks();
     this.resetForm();
     this.service.refreshList();
@@ -69,21 +66,32 @@ export class BookComponent implements OnInit {
     
     
     this.service.formData = {
-      Id: null,
+      id: null,
       title: '',
       genreid: 0,
       genre: {
-        Id: null,
+        id: null,
         name: '',
       },
       authorid: 0,
       author: {
-        Id: null,
+        id: null,
         name: '',
       },
       stock: null,
       publishdate: new Date().toLocaleString()
     };
+ }
+
+ onDelete(id: number) {
+  if (confirm('Tem certeza que deseja deletar?')) {
+    this.service.delete(id).subscribe(
+      success => {
+        this.service.get().subscribe(books => this.books = books);
+      },
+      error => { }
+    );
+  }
  }
 
  
@@ -93,15 +101,15 @@ export class BookComponent implements OnInit {
      console.log(form);
      console.log(this.service.formData);
 
-     if (this.service.formData.Id == 0 || this.service.formData.Id == 0) {
-        this.service.formData.Id = null;
+     if (this.service.formData.id == 0 || this.service.formData.id == 0) {
+        this.service.formData.id = null;
      }
 
-     if (this.service.formData.Id == null) {
+     if (this.service.formData.id == null) {
         const dataJson = {
           title: this.service.formData.title,
-          genreid: this.service.formData.genreid,
-          authorid: this.service.formData.authorid,
+          genreid: this.service.formData.genre.id,
+          authorid: this.service.formData.author.id,
           publishDate: this.service.formData.publishdate,
           stock: this.service.formData.stock,
         };
@@ -112,33 +120,13 @@ export class BookComponent implements OnInit {
      
     }
 
-
-    
-
-    
-
-    
-
-    //
-
-    //onDelete(id: number) {
-
-    //  if (confirm('Tem certeza que deseja deletar?')) {
-    //    this.service.delete(id).subscribe(
-    //      success => {
-    //        this.service.refreshList();
-    //        this.alertService.showAlertSuccess('Excluído com sucesso.');
-    //      },
-    //      error => { }
-    //    );
-    //  }
-    //}
-
-    //populateForm(emp: Book) {
-    //  // $('#fabricante').val(emp.fabricante.idFabricante);
-    //  // emp.ativo ? $('#ativo option:eq(1)').prop('selected', true) : $('#ativo option:eq(0)').prop('selected', true);
-    //  // this.service.formData = Object.assign({}, emp);
-    //}
+    populateForm(emp: Book) {
+      
+      // emp.author.id = emp.authorid;
+      // emp.genre.id = emp.genreid;
+      console.log(emp);
+      this.service.formData = Object.assign({}, emp);
+    }
 
     //getValueToComponentChild($event) {
     //  this.childFabricante = $event;

@@ -1,11 +1,12 @@
 
 <h1>Livros</h1>
 
- <form #form="ngForm" id="bookForm" (ngSubmit)="onSubmit(form)" autocomplete="off">
+<fieldset class="scheduler-border">
+    <form #form="ngForm" id="bookForm" (ngSubmit)="onSubmit(form)" autocomplete="off">
   <div class="row">
     <div class="col-xl-4 text-xs-center">
       <div class="mb-3">
-          <input type="hidden" name="Id" [(ngModel)]="service.formData.Id">
+          <input type="hidden" name="id" [(ngModel)]="service.formData.id">
           <div class="form-group">
             <label>Titulo</label>
             <input name="title" [(ngModel)]="service.formData.title" class="form-control" required maxlength="50">
@@ -13,50 +14,19 @@
       </div>
     </div>
 
-    <!-- <div class="col-xl-4 text-xs-center">
-      <div class="mb-3">
-          <div class="form-group">
-            <label>Autor</label>
-            <input name="authorid" [(ngModel)]="service.formData.authorid" class="form-control" required maxlength="50">
-          </div>
-      </div>
-    </div> -->
-
     <div class="col-xl-4 text-xs-center">
-        <app-combo-author [(comboValue)]="service.formData.authorid"></app-combo-author>
+        <app-combo-author [(comboValue)]="service.formData.author.id"></app-combo-author>
     </div>   
 
     <div class="col-xl-4 text-xs-center">
-        <app-combo-genre [(comboValue)]="service.formData.genreid"></app-combo-genre>
+        <app-combo-genre [(comboValue)]="service.formData.genre.id"></app-combo-genre>
     </div>   
-
-    <!-- <div class="col-xl-4 text-xs-center">
-        <date-pipe></date-pipe>
-    </div>    -->
-
-    <!-- <div class="col-xl-4 text-xs-center">
-      <div class="mb-3">
-          <div class="form-group">
-            <label>Gênero</label>
-            <input name="genreid" [(ngModel)]="service.formData.genreid" class="form-control" required maxlength="50">
-          </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="form-group row">
-        <label for="example-date-input" class="col-2 col-form-label">Date</label>
-        <div class="col-10">
-          <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-        </div>
-      </div> -->
 
     <div class="col-xl-4 text-xs-center">
       <div class="mb-3">
           <div class="form-group">
             <label>Data de Publicação</label>
             <input name="publishdate" [(ngModel)]="service.formData.publishdate" class="form-control" type="date" id="publishdate">
-
-            <!-- <input name="publishdate" [(ngModel)]="service.formData.publishdate" class="form-control" required maxlength="50" > -->
           </div>
       </div>
     </div>
@@ -81,10 +51,11 @@
    
   </div>
 </form> 
+</fieldset>
 
 <p *ngIf="!books"><em>Loading...</em></p>
-<fieldset>
-  <table class='table table-striped' *ngIf="books">
+<fieldset class="scheduler-border">
+    <table class='table table-striped' *ngIf="books">
     <thead>
       <tr>
         <th>#</th>
@@ -93,6 +64,7 @@
         <th>Gênero</th>
         <th>Data de Publicação</th>
         <th>Saldo</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -103,6 +75,12 @@
         <td>{{ books.genre.name }}</td>
         <td>{{ books.publishDate }}</td>
         <td>{{ books.stock }}</td>
+        <td>
+            <span class="btn-options">
+              <button title="Excluir" (click)="onDelete(books.id)" class="btn btn-outline-danger mb-1 btn-sm">Remover</button>
+              <button title="Editar" (click)="populateForm(books)" class="btn btn-outline-info mb-1 btn-sm">Editar</button>
+            </span>
+        </td>
       </tr>
     </tbody>
   </table>

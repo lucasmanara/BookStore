@@ -58,13 +58,29 @@ export class AuthorComponent implements OnInit {
     );
   }
 
+  onDelete(id: number) {
+    if (confirm('Tem certeza que deseja deletar?')) {
+      this.service.delete(id).subscribe(
+        success => {
+          this.service.get().subscribe(authors => this.authors = authors);
+          //  this.alertService.showAlertSuccess('Excluído com sucesso.');
+        },
+        error => { }
+      );
+    }
+   }
+
   resetForm(form?: NgForm) {
     
     this.service.formData = {
-      Id: null,
+      id: null,
       name: ''
     };
  }
+
+ populateForm(emp: Author) {
+  this.service.formData = Object.assign({}, emp);
+}
 
     onSubmit(form: NgForm) {
 
@@ -79,11 +95,11 @@ export class AuthorComponent implements OnInit {
     //   return;
     // }
 
-     if (this.service.formData.Id == 0 || this.service.formData.Id == 0) {
-        this.service.formData.Id = null;
+     if (this.service.formData.id == 0 || this.service.formData.id == 0) {
+        this.service.formData.id = null;
      }
 
-     if (this.service.formData.Id == null) {
+     if (this.service.formData.id == null) {
         const dataJson = {
           name: this.service.formData.name
         };
