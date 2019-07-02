@@ -21,11 +21,11 @@ namespace BookStore.Service.Validators
                 .NotEmpty().WithMessage("É necessario informar um titulo para o livro.")
                 .NotNull().WithMessage("É necessario informar um titulo para o livro.");
 
-            RuleFor(c => c.Genre)
+            RuleFor(c => c.GenreId)
                 .NotEmpty().WithMessage("É necessario informar um Genero para o livro.")
                 .NotNull().WithMessage("É necessario informar um Genero para o livro.");
 
-            RuleFor(c => c.Author)
+            RuleFor(c => c.AuthorId)
                 .NotEmpty().WithMessage("É necessario informar um Autor para o livro.")
                 .NotNull().WithMessage("É necessario informar um Autor para o livro.");
 

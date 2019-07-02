@@ -16,6 +16,7 @@ namespace BookStore.Domain.Interfaces
 
         T Select(int id);
 
-        IList<T> SelectAll();
+        IList<T> Select();
+
     }
 }

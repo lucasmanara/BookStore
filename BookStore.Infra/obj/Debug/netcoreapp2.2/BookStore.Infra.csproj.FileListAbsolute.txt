@@ -54,3 +54,17 @@ C:\Users\Lucas\source\BookStore\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.
 C:\Users\Lucas\source\BookStore\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.csproj.CopyComplete
 C:\Users\Lucas\source\BookStore\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.dll
 C:\Users\Lucas\source\BookStore\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.pdb
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.csprojAssemblyReference.cache
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.AssemblyInfo.cs
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.dll
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.pdb
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\bin\Debug\netcoreapp2.2\BookStore.Infra.deps.json
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\bin\Debug\netcoreapp2.2\BookStore.Infra.runtimeconfig.json
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\bin\Debug\netcoreapp2.2\BookStore.Infra.runtimeconfig.dev.json
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\bin\Debug\netcoreapp2.2\BookStore.Infra.dll
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\bin\Debug\netcoreapp2.2\BookStore.Infra.pdb
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\bin\Debug\netcoreapp2.2\BookStore.Domain.dll
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\bin\Debug\netcoreapp2.2\BookStore.Domain.pdb
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Infra\obj\Debug\netcoreapp2.2\BookStore.Infra.csproj.CopyComplete

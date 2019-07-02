@@ -6,13 +6,14 @@ using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BookStore.Service.Services
 {
     public class BaseService<T> : IService<T> where T : BaseEntity
     {
-        private BaseRepository<T> _repository;
+        public BaseRepository<T> _repository;
       
         public BaseService(BookStoreContext context)
         {

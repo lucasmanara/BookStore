@@ -1,4 +1,7 @@
+using BookStore.Domain.Interfaces;
+using BookStore.Domain.Models;
 using BookStore.Infra.Context;
+using BookStore.Service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,8 +27,13 @@ namespace BookStore.Web
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddTransient<IBookService, BookService>();
+            services.AddTransient<IService<Genre>, BaseService<Genre>>();
+            services.AddTransient<IService<Author>, BaseService<Author>>();
+
+
             services.AddDbContext<BookStoreContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("BookStoreContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

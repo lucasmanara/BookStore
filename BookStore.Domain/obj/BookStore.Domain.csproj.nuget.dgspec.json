@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas\\source\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {}
+    "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas\\source\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+    "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\source\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
         "projectName": "BookStore.Domain",
-        "projectPath": "C:\\Users\\Lucas\\source\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
+        "projectPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\source\\BookStore\\BookStore\\BookStore.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

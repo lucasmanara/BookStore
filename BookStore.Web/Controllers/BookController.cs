@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStore.Domain.Interfaces;
 using BookStore.Domain.Models;
 using BookStore.Infra.Context;
 using BookStore.Service.Services;
@@ -15,15 +16,17 @@ namespace BookStore.Web.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-        private BaseService<Book> _service;
-        private BaseService<Genre> _serviceGenre;
-        private BaseService<Author> _serviceAuthor;
+        private readonly IBookService _service;
+        private readonly IService<Genre> _serviceGenre;
+        private readonly IService<Author> _serviceAuthor;
 
-        public BookController(BookStoreContext context)
+        public BookController(IBookService service,
+            IService<Genre> serviceGenre,
+            IService<Author> serviceAuthor)
         {
-            _service        = new BaseService<Book>(context);
-            _serviceGenre   = new BaseService<Genre>(context);
-            _serviceAuthor  = new BaseService<Author>(context);
+            _service        = service;
+            _serviceGenre   = serviceGenre;
+            _serviceAuthor  = serviceAuthor;
         }
         // POST: api/Books
         [HttpPost]
@@ -31,13 +34,6 @@ namespace BookStore.Web.Controllers
         {
             try
             {
-                Genre genre = _serviceGenre.Get(item.GenreId);
-                item.Genre = genre;
-
-                Author author = _serviceAuthor.Get(item.AuthorId);
-                item.Author = author;
-                //.find.FirstOrDefault(x => x.Id == livro.GeneroId);
-
                 _service.Post<BookValidator>(item);
 
                 return new ObjectResult(item.Id);
@@ -97,15 +93,8 @@ namespace BookStore.Web.Controllers
         {
             try
             {
-                var listOfObj = _service.Get();
-
-                foreach (var obj in listOfObj)
-                {
-                    obj.Genre = _serviceGenre.Get(obj.GenreId);
-                    obj.Author = _serviceAuthor.Get(obj.AuthorId);
-                }
-
-                return new ObjectResult(_service.Get());
+                
+                return new ObjectResult(_service.Get().ToList());
             }
             catch (Exception ex)
             {
@@ -119,11 +108,7 @@ namespace BookStore.Web.Controllers
         {
             try
             {
-                var obj = _service.Get(id);
-                obj.Genre = _serviceGenre.Get(obj.GenreId);
-                obj.Author = _serviceAuthor.Get(obj.AuthorId);
-
-                return new ObjectResult(obj);
+                return new ObjectResult(_service.Get(id));
             }
             catch (ArgumentException ex)
             {

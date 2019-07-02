@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStore.Domain.Interfaces;
 using BookStore.Domain.Models;
 using BookStore.Infra.Context;
 using BookStore.Service.Services;
@@ -15,13 +16,11 @@ namespace BookStore.Web.Controllers
     [ApiController]
     public class GenreController : ControllerBase
     {
-        private BaseService<Genre> _service;
-        //private BaseService<Genre> _serviceGenre;
+        private readonly IService<Genre> _service;
 
-        public GenreController(BookStoreContext context)
+        public GenreController(IService<Genre> service)
         {
-            _service = new BaseService<Genre>(context);
-            //_serviceGenre = new BaseService<Genre>(context);
+            _service = service;
         }
         // POST: api/Books
         [HttpPost]
@@ -29,9 +28,6 @@ namespace BookStore.Web.Controllers
         {
             try
             {
-
-                //Genre genre = _serviceGenre.Get(item.IdGenre);
-                    //.find.FirstOrDefault(x => x.Id == livro.GeneroId);
             
             _service.Post<GenreValidator>(item);
 

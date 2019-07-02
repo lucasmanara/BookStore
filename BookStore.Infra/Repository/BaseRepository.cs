@@ -44,16 +44,9 @@ namespace BookStore.Infra.Repository
 
         public void Remove(int id)
         {
-            //Book book = _context.Books.Find(id);
-            //_context.Books.Remove(book);
-
             _context.Set<T>().Remove(Select(id));
             _context.SaveChanges();
         }
 
-        public IList<T> SelectAll()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

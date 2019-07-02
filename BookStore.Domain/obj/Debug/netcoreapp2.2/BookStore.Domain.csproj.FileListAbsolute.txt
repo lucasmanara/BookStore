@@ -31,3 +31,14 @@ C:\Users\Lucas\source\BookStore\BookStore\BookStore.Domain\obj\Debug\netcoreapp2
 C:\Users\Lucas\source\BookStore\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.AssemblyInfo.cs
 C:\Users\Lucas\source\BookStore\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.dll
 C:\Users\Lucas\source\BookStore\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.pdb
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\bin\Debug\netcoreapp2.2\BookStore.Domain.deps.json
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\bin\Debug\netcoreapp2.2\BookStore.Domain.runtimeconfig.json
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\bin\Debug\netcoreapp2.2\BookStore.Domain.runtimeconfig.dev.json
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\bin\Debug\netcoreapp2.2\BookStore.Domain.dll
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\bin\Debug\netcoreapp2.2\BookStore.Domain.pdb
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.AssemblyInfo.cs
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.dll
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.pdb
+C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Domain\obj\Debug\netcoreapp2.2\BookStore.Domain.csprojAssemblyReference.cache

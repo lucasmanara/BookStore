@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStore.Domain.Interfaces;
 using BookStore.Domain.Models;
 using BookStore.Infra.Context;
 using BookStore.Service.Services;
@@ -15,12 +16,11 @@ namespace BookStore.Web.Controllers
     [ApiController]
     public class AuthorController : ControllerBase
     {
-        private BaseService<Author> _service;
-        //private BaseService<Genre> _serviceGenre;
+        private readonly IService<Author> _service;
 
-        public AuthorController(BookStoreContext context)
+        public AuthorController(IService<Author> service)
         {
-            _service = new BaseService<Author>(context);
+            _service = service;
         }
         // POST: api/Books
         [HttpPost]

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BookStore.Domain.Models
 {
-    public abstract class BaseEntity
+    public class BaseEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
