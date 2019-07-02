@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {}
+    "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
         "projectName": "BookStore.Domain",
-        "projectPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj",
         "projectName": "BookStore.Infra",
-        "projectPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Infra\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -90,8 +90,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
-                "projectPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
+              "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
               }
             }
           }
@@ -136,14 +136,14 @@
         }
       }
     },
-    "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
         "projectName": "BookStore.Service",
-        "projectPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Service\\obj\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -162,11 +162,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
-                "projectPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
+              "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
               },
-              "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj": {
-                "projectPath": "C:\\Users\\Lucas\\source\\BookStore - Copia\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj"
+              "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj": {
+                "projectPath": "C:\\Users\\Lucas\\Desktop\\Lucas\\Projetos\\teste\\BookStore\\BookStore.Infra\\BookStore.Infra.csproj"
               }
             }
           }

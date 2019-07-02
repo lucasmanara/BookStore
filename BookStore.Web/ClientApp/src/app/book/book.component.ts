@@ -14,6 +14,7 @@ import * as $ from 'jquery';
   styleUrls: ['./book.component.scss']
 })
 
+
 export class BookComponent implements OnInit {
   title = 'Book';
   books: Array<any>;

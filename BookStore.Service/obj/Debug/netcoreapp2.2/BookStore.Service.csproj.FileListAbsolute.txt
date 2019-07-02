@@ -62,3 +62,19 @@ C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Service\obj\Debug\ne
 C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.csproj.CopyComplete
 C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.dll
 C:\Users\Lucas\source\BookStore - Copia\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.pdb
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Service.deps.json
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Service.runtimeconfig.json
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Service.runtimeconfig.dev.json
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Service.dll
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Service.pdb
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Domain.dll
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Infra.dll
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Domain.pdb
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\bin\Debug\netcoreapp2.2\BookStore.Infra.pdb
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.AssemblyInfoInputs.cache
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.AssemblyInfo.cs
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.csproj.CopyComplete
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.dll
+C:\Users\Lucas\Desktop\Lucas\Projetos\teste\BookStore\BookStore.Service\obj\Debug\netcoreapp2.2\BookStore.Service.pdb
