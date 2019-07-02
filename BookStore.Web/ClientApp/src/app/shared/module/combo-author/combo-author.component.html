@@ -2,7 +2,6 @@
   <div class="form-group">
     <label for="fabricante">Autor</label>
     <select class="form-control" name="author" id="author" #author [(ngModel)]="comboValue"  (ngModelChange)="comboValueChange.emit(comboValue)">
-
       <option value="0">Selecione</option>
       <option *ngFor="let author of authors" value="{{ author.id }}">{{ author.name }}</option>
     </select>

@@ -16,14 +16,10 @@ import * as $ from 'jquery';
 
 export class BookComponent implements OnInit {
   title = 'Book';
-  //dtOptions: DataTables.Settings = {};
   books: Array<any>;
-
-  childFabricante: string;
 
   constructor(
     public service: BookService,
-    //private alertService: AlertModalService
   ) { }
 
   ngOnInit() {
@@ -37,34 +33,26 @@ export class BookComponent implements OnInit {
   }
 
   insertRecord(form) {
-    console.log(form)
     this.service.create(form).subscribe(
       success => {
-        console.log('salvou');
         this.resetForm(form);
-        this.service.refreshList();
-        //this.alertService.showAlertSuccess('Cadastrado com sucesso.');
+        this.service.get().subscribe(books => this.books = books);
       },
       error => { }
     );
    }
 
    updateRecord(form) {
-    console.log(form)
     this.service.put(form).subscribe(
       success => {
         this.resetForm(form);
-        this.service.refreshList();
-        //this.alertService.showAlertSuccess('Atualizado com sucesso.');
+        this.service.get().subscribe(books => this.books = books);
       },
       error => { }
     );
   }
 
   resetForm(form?: NgForm) {
-
-    
-    
     this.service.formData = {
       id: null,
       title: '',
@@ -94,12 +82,7 @@ export class BookComponent implements OnInit {
   }
  }
 
- 
-
     onSubmit(form: NgForm) {
-
-     console.log(form);
-     console.log(this.service.formData);
 
      if (this.service.formData.id == 0 || this.service.formData.id == 0) {
         this.service.formData.id = null;
@@ -121,14 +104,6 @@ export class BookComponent implements OnInit {
     }
 
     populateForm(emp: Book) {
-      
-      // emp.author.id = emp.authorid;
-      // emp.genre.id = emp.genreid;
-      console.log(emp);
       this.service.formData = Object.assign({}, emp);
     }
-
-    //getValueToComponentChild($event) {
-    //  this.childFabricante = $event;
-    //}
   }

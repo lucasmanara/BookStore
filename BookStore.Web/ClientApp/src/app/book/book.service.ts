@@ -21,8 +21,6 @@ export class BookService {
 
   private readonly API = `${environment.API}Book`;
 
-  
-
   constructor(private http: HttpClient) {}
 
   refreshList() {
@@ -35,7 +33,7 @@ export class BookService {
   }
 
   get() {
-    return this.http.get<Book[]>(this.API+'/28').pipe(
+    return this.http.get<Book[]>(this.API).pipe(
       tap(console.log)
     );
   }

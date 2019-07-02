@@ -14,7 +14,6 @@ import { GenreComponent } from './genre/genre.component';
 import { AuthorComponent } from './author/author.component';
 import { ComboAuthorComponent } from './shared/module/combo-author/combo-author.component';
 import { ComboGenreComponent } from './shared/module/combo-genre/combo-genre.component';
-import { DatePipeComponent } from './shared/module/date-pipe/date-pipe.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { DatePipeComponent } from './shared/module/date-pipe/date-pipe.component
     FetchDataComponent,
     ComboAuthorComponent,
     ComboGenreComponent,
-    DatePipeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
