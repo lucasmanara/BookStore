@@ -36,10 +36,8 @@ export class GenreComponent implements OnInit {
   }
 
   insertRecord(form) {
-    console.log(form)
     this.service.create(form).subscribe(
       success => {
-        console.log('salvou');
         this.resetForm(form);
         //this.service.refreshList()
         this.service.get().subscribe(genres => this.genres = genres);
@@ -50,13 +48,10 @@ export class GenreComponent implements OnInit {
    }
 
   updateRecord(form) {
-    console.log(form)
     this.service.put(form).subscribe(
       success => {
         this.resetForm(form);
-        // this.service.refreshList();
         this.service.get().subscribe(genres => this.genres = genres);
-        //this.alertService.showAlertSuccess('Atualizado com sucesso.');
       },
       error => { }
     );
@@ -84,16 +79,6 @@ export class GenreComponent implements OnInit {
 
     onSubmit(form: NgForm) {
 
-     console.log(this.service.formData);
-    //  if (this.service.formData.author.Id == 0 || this.service.formData.author.Id == null) {
-    //   this.alertService.showAlertWarning('Selecione um autor para cadastrar o livro.');
-    //   return;
-    // }
-
-    // if (this.service.formData.genre.Id == 0 || this.service.formData.genre.Id == null) {
-    //   this.alertService.showAlertWarning('Selecione um autor para cadastrar o livro.');
-    //   return;
-    // }
 
      if (this.service.formData.id == 0 || this.service.formData.id == 0) {
         this.service.formData.id = null;
@@ -103,9 +88,7 @@ export class GenreComponent implements OnInit {
         const dataJson = {
           name: this.service.formData.name
         };
-        
-       console.log('POST')
-        //this.insertRecord(dataJson);
+        this.insertRecord(dataJson);
      } else {
        console.log(this.service.formData)
         this.updateRecord(this.service.formData);
