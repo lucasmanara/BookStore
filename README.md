@@ -15,6 +15,7 @@ Projeto CRUD de Livros
  - [x] Web API
  - [x] EntityFramework
  - [x] Migrations
+ - [x] Injeção de dependencia
  - [x] Angular
  - [x] Bootstrap
 
